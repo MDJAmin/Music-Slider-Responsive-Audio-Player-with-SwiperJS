@@ -9,7 +9,7 @@ const backwardButton = document.querySelector(".controls button.backward");
 const songName = document.querySelector(".music-player h1");
 const artistName = document.querySelector(".music-player p");
 
-console.log(songs)
+console.log(songs);
 
 let currentSongIndex = 3;
 
@@ -18,7 +18,7 @@ function updateSongInfo() {
   artistName.textContent = songs[currentSongIndex].name;
   song.src = songs[currentSongIndex].source;
 
-  song.addEventListener("loadeddata", function () {}); 
+  song.addEventListener("loadeddata", function () {});
 }
 
 song.addEventListener("timeupdate", function () {
@@ -83,7 +83,7 @@ var swiper = new Swiper(".swiper", {
   slidesPerView: "auto",
   allowTouchMove: false,
   spaceBetween: 40,
-  loop:true,
+  loop: true,
   coverflowEffect: {
     rotate: 25,
     stretch: 0,
