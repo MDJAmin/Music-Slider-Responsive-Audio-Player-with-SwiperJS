@@ -96,3 +96,28 @@ body {
     cursor: pointer;
   }
   
+  
+/* Music Player */
+
+.music-player {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-clr);
+    width: 380px;
+    padding: 10px 30px;
+    border-radius: 20px;
+  }
+  
+  .music-player h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.6;
+  }
+  
+  .music-player p {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.6;
+  }
