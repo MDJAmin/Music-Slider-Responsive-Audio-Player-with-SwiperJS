@@ -3,7 +3,7 @@ export const songs = [
           title: "Symphony",
           name: "Clean Bandit ft. Zara Larsson",
           source:
-            "https://github.com/ecemgo/mini-samples-great-tricks/raw/main/song-list/Clean-Bandit-Symphony.mp3",
+            "",
         },
         {
           title: "Pawn It All",

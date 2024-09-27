@@ -1,4 +1,4 @@
-import { songs } from "./songs";
+import { songs } from "./songs.js";
 
 const progress = document.getElementById("progress");
 const song = document.getElementById("song");
@@ -8,6 +8,8 @@ const forwardButton = document.querySelector(".controls button.forward");
 const backwardButton = document.querySelector(".controls button.backward");
 const songName = document.querySelector(".music-player h1");
 const artistName = document.querySelector(".music-player p");
+
+console.log(songs)
 
 let currentSongIndex = 3;
 
