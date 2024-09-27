@@ -1,5 +1,5 @@
-"use strict"
 import { songs } from "./songs";
+
 const progress = document.getElementById("progress");
 const song = document.getElementById("song");
 const controlIcon = document.getElementById("controlIcon");
@@ -9,7 +9,6 @@ const backwardButton = document.querySelector(".controls button.backward");
 const songName = document.querySelector(".music-player h1");
 const artistName = document.querySelector(".music-player p");
 
-
 let currentSongIndex = 3;
 
 function updateSongInfo() {
@@ -17,7 +16,7 @@ function updateSongInfo() {
   artistName.textContent = songs[currentSongIndex].name;
   song.src = songs[currentSongIndex].source;
 
-  song.addEventListener("loadeddata", function () {});
+  song.addEventListener("loadeddata", function () {}); 
 }
 
 song.addEventListener("timeupdate", function () {
@@ -52,3 +51,45 @@ function playPause() {
 }
 
 playPauseButton.addEventListener("click", playPause);
+
+progress.addEventListener("input", function () {
+  song.currentTime = progress.value;
+});
+
+progress.addEventListener("change", function () {
+  playSong();
+});
+
+forwardButton.addEventListener("click", function () {
+  currentSongIndex = (currentSongIndex + 1) % songs.length;
+  updateSongInfo();
+  playPause();
+});
+
+backwardButton.addEventListener("click", function () {
+  currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
+  updateSongInfo();
+  playPause();
+});
+
+updateSongInfo();
+
+var swiper = new Swiper(".swiper", {
+  effect: "coverflow",
+  centeredSlides: true,
+  initialSlide: 3,
+  slidesPerView: "auto",
+  allowTouchMove: false,
+  spaceBetween: 40,
+  coverflowEffect: {
+    rotate: 25,
+    stretch: 0,
+    depth: 50,
+    modifier: 1,
+    slideShadows: false,
+  },
+  navigation: {
+    nextEl: ".forward",
+    prevEl: ".backward",
+  },
+});
