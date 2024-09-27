@@ -83,6 +83,7 @@ var swiper = new Swiper(".swiper", {
   slidesPerView: "auto",
   allowTouchMove: false,
   spaceBetween: 40,
+  loop:true,
   coverflowEffect: {
     rotate: 25,
     stretch: 0,
