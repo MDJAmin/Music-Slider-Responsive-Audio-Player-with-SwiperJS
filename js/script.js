@@ -18,7 +18,7 @@ function updateSongInfo() {
   artistName.textContent = songs[currentSongIndex].name;
   song.src = songs[currentSongIndex].source;
 
-  song.addEventListener("loadeddata", function () {});
+  song.addEventListener("loadeddata", function () { });
 }
 
 song.addEventListener("timeupdate", function () {
