@@ -74,7 +74,7 @@ body {
   position: absolute;
   inset: 0;
   width: 100%;
-  height: 98%;
+  height: 100%;
   background-color: rgba(28, 22, 37, 0.6);
   border-radius: inherit;
   opacity: 0;
