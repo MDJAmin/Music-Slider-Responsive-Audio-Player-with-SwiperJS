@@ -181,3 +181,26 @@ body {
 .controls button:nth-child(2):is(:hover, :focus-visible) {
   transform: scale(1.25);
 }
+
+.MDJAminDiv {
+  z-index: 4444;
+  position: fixed;
+  bottom: 5%;
+  left: 2%;
+}
+
+.MDJAmin {
+  text-decoration: none;
+  border-top: 1px dashed white !important;
+  border-bottom: 1px dashed white !important;
+  padding: 4px 2px;
+  color: rgba(204, 204, 204, 0.414);
+  font-family: monospace;
+  font-style: italic;
+  font-size: 1.3em;
+  transition: all 0.5s;
+}
+
+.MDJAmin:hover {
+  color: white;
+}

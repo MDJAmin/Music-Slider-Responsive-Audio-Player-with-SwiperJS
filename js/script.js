@@ -37,7 +37,6 @@ export const songs = [
   },
 ];
 
-
 const progress = document.getElementById("progress");
 const song = document.getElementById("song");
 const controlIcon = document.getElementById("controlIcon");
@@ -56,7 +55,7 @@ function updateSongInfo() {
   artistName.textContent = songs[currentSongIndex].name;
   song.src = songs[currentSongIndex].source;
 
-  song.addEventListener("loadeddata", function () { });
+  song.addEventListener("loadeddata", function () {});
 }
 
 song.addEventListener("timeupdate", function () {
